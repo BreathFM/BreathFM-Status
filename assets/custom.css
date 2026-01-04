@@ -24,11 +24,6 @@ body {
   filter: grayscale(100%);
 }
 
-/* 4. Texteinstellungen */
-h1, h2, h3, p, span {
-  color: #e8e9ed !important;
-}
-
 /* Header / Navbar */
 nav, header {
   background-color: rgba(11, 12, 16, 0.8) !important;
