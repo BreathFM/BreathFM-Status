@@ -1,17 +1,16 @@
-/* --- Upptime: BreathFM Original Look - Clean Intro Fix --- */
+/* --- Upptime: BreathFM Look - No Box for Intro --- */
 
 :root {
   --body-background-color: #0b0c10 !important;
   --body-text-color: #e8e9ed !important;
 }
 
-/* 1. Hintergrund-Setup */
+/* 1. BreathFM Hintergrund-Style */
 body {
   background-color: #0b0c10 !important;
   background-image: radial-gradient(circle at center, #1a1c23 0%, #0b0c10 100%) !important;
   background-attachment: fixed !important;
   color: #e8e9ed !important;
-  overflow-x: hidden;
 }
 
 .bg-image {
@@ -25,49 +24,27 @@ body {
   filter: grayscale(100%);
 }
 
-/* 2. INTRO-BOX FIX (Bleibt wie gewünscht) */
-main > div:first-of-type, 
-section:first-of-type, 
-.container > div:first-child,
-main > div:first-of-type > div {
+/* 2. DIE BOX VOM INTRO ENTFERNEN */
+/* Wir entfernen Hintergrund, Rand und Schatten der allerersten Inhaltsbox */
+main > div:first-of-type,
+section:first-of-type {
   background: transparent !important;
   background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  
-  /* Text-Positionierung */
-  padding-left: 10% !important; 
-  padding-right: 5% !important;
-  text-align: left !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
-/* 3. ALLE ANDEREN BOXEN (Rückbau auf Standard) */
-main > div:not(:first-of-type), 
-.card, 
-.container main > div,
-section:not(:first-of-type) {
-  /* Hier habe ich die dicken Ränder und extra Schatten entfernt */
-  background-color: rgba(25, 28, 36, 0.5) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 12px !important;
-  backdrop-filter: blur(12px) !important;
-  padding: 2rem !important;
-  margin-bottom: 2rem !important;
-}
-
-/* 4. Header / Navbar */
-nav, header, .navbar {
-  background-color: rgba(11, 12, 16, 0.9) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-  backdrop-filter: blur(10px);
-}
-
-/* 5. Texte */
-h1, h2, h3, p, span, div {
+/* 4. Texteinstellungen */
+h1, h2, h3, p, span {
   color: #e8e9ed !important;
 }
 
-small, .text-gray-500 {
-  color: rgba(232, 233, 237,
+/* Header / Navbar */
+nav, header {
+  background-color: rgba(11, 12, 16, 0.8) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
