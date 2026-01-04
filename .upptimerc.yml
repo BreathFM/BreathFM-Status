@@ -50,7 +50,7 @@ status-website:
     - name: "description"
       content: "Status der Radio-Sender von BreathFM!"
   navbar:
-    - title: BreathFM
+    - title: Zurück zur Webseite
       href: https://breathfm.de/
   links:
     - rel: stylesheet
