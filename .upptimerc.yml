@@ -85,7 +85,7 @@ i18n:
   ms: ms  
   loading: Laden  
   navGitHub: GitHub  
-  footer: "Diese Seite ist [Open Source]($REPO) und wird von [Upptime](https://upptime.js.org) betrieben"  
+  footer: "Diese Seite wird von BreathFM betrieben und bietet Auskunft über unsere Dienste"  
   rateLimitExceededTitle: Ratenlimit überschritten  
   rateLimitExceededIntro: "Du hast die maximale Anzahl an Anfragen pro Stunde überschritten. Du musst warten, bevor du diese Website erneut nutzen kannst. Alternativ kannst du ein GitHub-Personal-Access-Token hinzufügen, um die Website weiter zu nutzen."  
   rateLimitExceededWhatDoesErrorMean: Was bedeutet dieser Fehler?  
