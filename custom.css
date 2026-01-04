@@ -1,6 +1,24 @@
-/* --- Upptime: Nur das Hintergrundbild --- */
+/* --- Upptime: BreathFM Original Look --- */
 
-/* 1. Das Hintergrund-Div aus deinem customBodyHtml konfigurieren */
+:root {
+  --body-background-color: #0b0c10 !important;
+  --body-text-color: #e8e9ed !important;
+  --card-background-color: rgba(25, 28, 36, 0.6) !important;
+}
+
+/* 1. Der BreathFM Hintergrund-Style */
+/* Ein dunkler radialer Verlauf, der von der Mitte ausgeht */
+body {
+  background-color: #0b0c10 !important;
+  background-image: radial-gradient(circle at center, #1a1c23 0%, #0b0c10 100%) !important;
+  background-attachment: fixed !important;
+  color: #e8e9ed !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Das Hintergrund-Div (falls du das Bild trotzdem als Overlay willst) */
+/* Wenn du NUR den dunklen BreathFM-Look willst, lass das Bild weg oder nutze es so: */
 .bg-image {
   position: fixed;
   top: 0;
@@ -11,18 +29,26 @@
   background-image: url('https://djwillgill.com/wp-content/uploads/2024/08/DJ-Mixers-scaled.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
-  background-repeat: no-repeat !important;
+  opacity: 0.15; /* Nur ganz schwach sichtbar, wie auf der BreathFM Seite */
+  filter: grayscale(100%); /* Schwarz-weiss fuer den edlen Look */
 }
 
-/* 2. Den Standard-Hintergrund transparent machen, damit man das Bild sieht */
-body {
-  background-color: transparent !important;
+/* 3. Boxen im BreathFM Style (leicht transparent, saubere Kanten) */
+.card, .container main > div {
+  background-color: rgba(25, 28, 36, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 12px !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* 3. Textfarbe auf Weiss setzen, damit man auf dem dunklen Bild überhaupt was liest */
-body, h1, h2, h3, p, span, div {
-  color: #ffffff !important;
+/* 4. Header / Navbar */
+nav, header {
+  background-color: rgba(11, 12, 16, 0.8) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
-/* Online-Status */
-.up { color: #00ff88 !important; }
+/* 5. Texte */
+h1, h2, h3, p, span {
+  color: #e8e9ed !important;
+}
