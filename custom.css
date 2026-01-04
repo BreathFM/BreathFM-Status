@@ -1,82 +1,27 @@
-/* --- Upptime: Ultra-Blur, No Blue Header, Targeted Centering --- */
+/* --- Upptime: Nur das Hintergrundbild --- */
 
-:root {
-  --body-text-color: #ffffff !important;
-  --card-background-color: rgba(15, 15, 15, 0.3) !important; /* Transparenter für mehr Blur */
-}
-
-/* 1. Hintergrund & Blur-Fix */
+/* 1. Das Hintergrund-Div aus deinem customBodyHtml konfigurieren */
 .bg-image {
   position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  z-index: -2;
-  background-image: url('https://djwillgill.com/wp-content/uploads/2024/08/DJ-Mixers-scaled.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: rgba(0, 15, 35, 0.65) !important; 
-  background-blend-mode: overlay !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url('https://djwillgill.com/wp-content/uploads/2024/08/DJ-Mixers-scaled.jpg') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
 }
 
+/* 2. Den Standard-Hintergrund transparent machen, damit man das Bild sieht */
 body {
   background-color: transparent !important;
+}
+
+/* 3. Textfarbe auf Weiss setzen, damit man auf dem dunklen Bild überhaupt was liest */
+body, h1, h2, h3, p, span, div {
   color: #ffffff !important;
-}
-
-/* 2. Header: Absolut KEIN Blau mehr, nur die Linie */
-nav, header, .navbar {
-  background: rgba(255, 255, 255, 0.02) !important; /* Fast unsichtbar */
-  background-color: transparent !important;
-  backdrop-filter: blur(40px) saturate(150%) !important; /* Massiver Blur */
-  -webkit-backdrop-filter: blur(40px) saturate(150%) !important;
-  border-bottom: 4px solid #007bff !important; /* Nur die Highlight-Linie */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important; /* Grauer Schatten */
-  border-radius: 0 0 30px 30px !important;
-}
-
-/* 3. Boxen: Dickere graue Ränder & maximaler Glass-Effekt */
-.card, .container main > div, section {
-  background-color: rgba(20, 20, 20, 0.4) !important;
-  backdrop-filter: blur(50px) brightness(0.8) !important; /* Ultra Blur */
-  -webkit-backdrop-filter: blur(50px) brightness(0.8) !important;
-  border: 5px solid rgba(180, 180, 180, 0.5) !important; /* Sehr dicker grauer Rand */
-  border-radius: 40px !important; /* Noch runder */
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6) !important;
-  margin-bottom: 2.5rem !important;
-}
-
-/* 4. SPEZIELLES ZENTRIEREN: Nur die Intro-Box (BreathFM Text) */
-/* Wir suchen gezielt nach dem Container, der deinen Intro-Text enthält */
-main > div:first-of-type, 
-header + main > div,
-.container > div:first-child {
-  text-align: center !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* Text-Elemente in der Intro-Box mittig zwingen */
-main > div:first-of-type h1, 
-main > div:first-of-type p, 
-main > div:first-of-type div {
-  text-align: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* 5. Restliche Boxen (Senderliste) wieder linksbuendig */
-main > div:not(:first-of-type),
-.card-content {
-  text-align: left !important;
-  display: block !important;
-}
-
-/* 6. Text-Korrekturen */
-h1, h2, h3, p, span, strong, .lead {
-  color: #ffffff !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important; /* Bessere Lesbarkeit */
 }
 
 /* Online-Status */
