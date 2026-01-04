@@ -8,6 +8,9 @@ sites:
     port: 8000
     check: "tcp-ping"
     ipv6: false
+  - name: Streamserver
+    url: https://stream.breathfm.de
+    
   - name: InTheMiX
     url: 88.99.104.157
     port: 8010
